@@ -1,0 +1,162 @@
+
+        * {
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f2f4f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .profile-card {
+            display: flex;
+            width: 900px;
+            max-width: 95%;
+            background: #ffffff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* LEFT PANEL */
+        .profile-left {
+            background: linear-gradient(180deg, #2e7d32, #66bb6a);
+            color: #fff;
+            width: 35%;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .profile-left h2 {
+            margin: 10px 0 5px;
+            font-size: 24px;
+        }
+
+        .profile-left p {
+            margin: 0;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 35px;
+        }
+
+        .stat h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+
+        .stat span {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        /* RIGHT PANEL */
+        .profile-right {
+            width: 65%;
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 18px;
+            background: #2e7d32;
+            margin-right: 10px;
+            border-radius: 2px;
+        }
+
+        .section p {
+            margin: 0;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* SKILLS / CROPS */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* ACTION BUTTONS */
+        .actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 26px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .btn-follow {
+            background: #2e7d32;
+            color: #fff;
+        }
+
+        .btn-message {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+            }
+
+            .profile-left, .profile-right {
+                width: 100%;
+            }
+        }
