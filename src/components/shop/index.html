@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seed Shop</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header>
+    <h1>Farmer Seed Shop</h1>
+  </header>
+
+  <div class="container">
+    <div class="balance">
+      <div>Coins: <span id="coins">100</span></div>
+      <div>Inventory: <span id="inventory">0</span> seeds</div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Rice Seeds</h3>
+        <div class="price">Price: 5 coins</div>
+        <button onclick="buySeed(5)">Buy</button>
+      </div>
+
+      <div class="card">
+        <h3>Corn Seeds</h3>
+        <div class="price">Price: 8 coins</div>
+        <button onclick="buySeed(8)">Buy</button>
+      </div>
+
+      <div class="card">
+        <h3>Wheat Seeds</h3>
+        <div class="price">Price: 6 coins</div>
+        <button onclick="buySeed(6)">Buy</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Minimal Seed Shop Prototype
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
