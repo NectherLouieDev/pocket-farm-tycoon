@@ -5,7 +5,7 @@
         }
 
         body {
-            background: #f2f4f7;
+            background: #3b4a5c;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,7 +18,7 @@
             display: flex;
             width: 900px;
             max-width: 95%;
-            background: #ffffff;
+            background: #c0bbac;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -26,8 +26,8 @@
 
         /* LEFT PANEL */
         .profile-left {
-            background: linear-gradient(180deg, #2e7d32, #66bb6a);
-            color: #fff;
+            background: linear-gradient(180deg, #2a382a, #66aa03);
+            color: #c0bbac;
             width: 35%;
             padding: 40px 30px;
             text-align: center;
@@ -101,8 +101,10 @@
         }
 
         .section p {
-            margin: 0;
-            color: #555;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1;      
+            color: #28282B;
             line-height: 1.6;
         }
 
@@ -114,8 +116,8 @@
         }
 
         .tag {
-            background: #e8f5e9;
-            color: #2e7d32;
+            background: #66aa03;
+            color: #0A0A0A;
             padding: 8px 14px;
             border-radius: 20px;
             font-size: 14px;
