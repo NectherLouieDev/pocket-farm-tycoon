@@ -1,12 +1,12 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7f6;
-    color: #333;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #3b4a5c;
+    color: #333333;
 }
 
 header {
-    background: #2f7d32;
+    background: #c0bbac;
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -19,7 +19,8 @@ header {
 }
 
 .balance {
-    background: #ffffff;
+    background: #c0bbac;
+    color: #ffffff;
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -36,7 +37,8 @@ header {
 }
 
 .card {
-    background: #ffffff;
+    background: #c0bbac;
+    color:#5e452a;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -55,7 +57,7 @@ header {
 }
 
 button {
-    background: #2f7d32;
+    background: #66aa0e;
     color: #fff;
     border: none;
     border-radius: 6px;

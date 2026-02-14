@@ -7,35 +7,23 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
   <header>
-    <h1>Farmer Seed Shop</h1>
+    <h1 id="header-title">Farmer Seed Shop</h1>
   </header>
 
   <div class="container">
+
     <div class="balance">
       <div>Coins: <span id="coins">100</span></div>
       <div>Inventory: <span id="inventory">0</span> seeds</div>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h3>Rice Seeds</h3>
-        <div class="price">Price: 5 coins</div>
-        <button onclick="buySeed(5)">Buy</button>
-      </div>
+    <!-- Only an empty container now -->
+    <div class="grid" id="shopGrid"></div>
 
-      <div class="card">
-        <h3>Corn Seeds</h3>
-        <div class="price">Price: 8 coins</div>
-        <button onclick="buySeed(8)">Buy</button>
-      </div>
+    <button id="testBtn">Test Me</button>
 
-      <div class="card">
-        <h3>Wheat Seeds</h3>
-        <div class="price">Price: 6 coins</div>
-        <button onclick="buySeed(6)">Buy</button>
-      </div>
-    </div>
   </div>
 
   <footer>
