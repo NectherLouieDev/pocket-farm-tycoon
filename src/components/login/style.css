@@ -2,42 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
-/* Full-page container */
+/* Mobile-only background */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    background: #2a382a;  /* Your chosen palette */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Outer container */
+/* Phone container */
 .container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 480px;   /* Phone width */
+    padding: 15px;
 }
 
 /* Login card */
 .login-card {
-    width: 360px;
-    background: #ffffff;
-    padding: 30px 25px;
+    width: 100%;
+    background: #eeeeee;
+    padding: 25px 20px;
     border-radius: 15px;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-/* Title */
 .login-card h2 {
     margin-bottom: 20px;
 }
 
-/* Input groups */
+/* Inputs */
 .input-group {
     margin-bottom: 15px;
     text-align: left;
@@ -51,20 +49,21 @@ body {
 
 .input-group input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 25px;
     border: 1px solid #ccc;
     outline: none;
+    font-size: 14px;
 }
 
-/* Login button */
+/* Buttons */
 .login-btn {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 10px;
     border: none;
     border-radius: 25px;
-    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    background: linear-gradient(to right, #134d37, #15ad6e);
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -74,16 +73,14 @@ body {
     opacity: 0.9;
 }
 
-/* Forgot password */
 .forgot {
     display: block;
     margin: 10px 0;
     font-size: 14px;
-    color: #3a7bd5;
+    color: #0e8d3e;
     text-decoration: none;
 }
 
-/* Signup section */
 .new-user {
     margin-top: 15px;
     font-size: 14px;
@@ -91,26 +88,26 @@ body {
 
 .signup-btn {
     margin-top: 8px;
-    padding: 8px 22px;
+    padding: 10px 22px;
     border-radius: 25px;
     border: 1px solid #000;
     background: transparent;
     cursor: pointer;
+    width: 100%;
 }
 
-/* Social signup */
 .signup-with {
     margin: 20px 0 10px;
     font-size: 13px;
 }
 
 .social-icons i {
-    margin: 0 10px;
-    font-size: 18px;
-    color: #3a7bd5;
+    margin: 0 12px;
+    font-size: 20px;
+    color: #145a33;
     cursor: pointer;
 }
 
 .social-icons i:hover {
-    color: #00d2ff;
+    color: #10f16e;
 }
