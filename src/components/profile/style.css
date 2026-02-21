@@ -6,22 +6,23 @@
 
         body {
             background: #3b4a5c;
-            display: flex;
             justify-content: center;
             align-items: center;
-            
             min-height: 100vh;
             margin: 0;
         }
 
         .profile-card {
             display: flex;
-            width: 900px;
+            width: 80%;
             max-width: 95%;
             background: #c0bbac;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-left: 10%;
+            margin-top: 2%;
+        
         }
 
         /* LEFT PANEL */
@@ -150,6 +151,12 @@
 
         .btn:hover {
             opacity: 0.9;
+        }
+        
+        .btn-products {
+            background: #4f6d81;
+            Color: #c0bbac
+
         }
 
         /* RESPONSIVE */
