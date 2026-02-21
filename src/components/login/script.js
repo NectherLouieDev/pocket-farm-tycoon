@@ -41,6 +41,17 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
 
     if (username === storedUsername && password === storedPassword) {
         alert("Login Successful!");
+
+        // Store in session storage (clears when browser closes)
+        sessionStorage.setItem("authenticated", "true");
+        sessionStorage.setItem("username", username);
+        
+        // Also store in localStorage for "remember me" functionality if needed
+        localStorage.setItem("lastLogin", new Date().toISOString());
+        
+        // Redirect to dashboard with username as URL parameter (optional)
+        window.location.href = "../dashboard/index.html";
+
     } else {
         alert("Invalid Username or Password");
     }

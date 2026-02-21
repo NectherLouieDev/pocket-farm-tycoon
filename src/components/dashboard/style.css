@@ -1,0 +1,356 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(145deg, #1b4a2e 0%, #2d6a4f 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+/* main card – farm dashboard */
+.dashboard {
+    max-width: 780px;
+    width: 100%;
+    background-color: #f2eee5;  /* soft parchment */
+    border-radius: 48px 48px 32px 32px;
+    box-shadow: 0 25px 40px -10px rgba(0, 30, 10, 0.6), inset 0 2px 4px rgba(255, 255, 240, 0.6);
+    padding: 24px 22px 30px 22px;
+    border: 2px solid #ccbda0;
+}
+
+/* ===== header with XP & currency ===== */
+.status-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e7dcc0;
+    padding: 12px 22px;
+    border-radius: 200px;
+    margin-bottom: 24px;
+    box-shadow: inset 0 2px 5px rgba(80, 60, 30, 0.15), 0 6px 0 #8f7b5c;
+    border: 1px solid #c9af7b;
+}
+
+.xp-block {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #312e26;
+    color: #fadf9e;
+    padding: 6px 20px 6px 16px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+    box-shadow: inset 0 -2px 0 #5f4e2e;
+    border: 1px solid #b49b67;
+}
+
+.xp-block span:first-child {
+    background: #ffd966;
+    color: #2e4a33;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.coin-block {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f4e1b0;
+    padding: 6px 20px;
+    border-radius: 40px;
+    color: #2f4d2b;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: 1px solid #dbb164;
+    box-shadow: inset 0 -2px 0 #ab8b4c;
+}
+
+.coin-icon {
+    background: #f5b841;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #3b2e12;
+    box-shadow: 0 3px 0 #8f6f2d;
+}
+
+/* Seed shop & dashboard title */
+.section-title {
+    display: flex;
+    align-items: baseline;
+    margin: 16px 6px 12px 6px;
+}
+
+.section-title h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #2f4f2f;
+    text-shadow: 2px 2px 0 #ccbf96;
+    letter-spacing: -0.5px;
+    margin-right: 18px;
+}
+
+.section-title .badge {
+    background: #cfa56b;
+    color: #1f3f1f;
+    padding: 6px 18px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #e8c37b;
+    box-shadow: inset 0 1px 4px #ffeecc;
+}
+
+/* plots & items grid */
+.plot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0 16px;
+}
+
+/* base card */
+.plot-card {
+    flex: 1 1 180px;
+    background: #fcf9e9;
+    border-radius: 28px;
+    border: 3px solid #c3b28b;
+    padding: 16px 12px 14px;
+    box-shadow: 0 9px 0 #917b56, inset 0 -2px 5px #ece1c0;
+    transition: transform 0.1s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.plot-card:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #7b643f;
+}
+
+.card-label {
+    font-weight: 700;
+    color: #3c5e3c;
+    background: #e3dbb8;
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    align-self: flex-start;
+    border: 1px solid #bdaa73;
+}
+
+.crop-icon {
+    font-size: 2.6rem;
+    line-height: 1;
+    margin-bottom: 4px;
+    filter: drop-shadow(2px 6px 0 #c0a16b);
+}
+
+.crop-details {
+    background: #e5dbbb;
+    border-radius: 30px;
+    padding: 10px 8px;
+    margin: 12px 0 6px;
+    border: 1px solid #b2904f;
+}
+
+.cost-row, .time-row, .yield-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #2b4020;
+    padding: 2px 4px;
+}
+
+.cost-row span:last-child, .yield-row span:last-child {
+    background: #fef7d3;
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid #bda468;
+}
+
+.plant-btn, .buy-btn {
+    background: #589641;
+    border: none;
+    color: white;
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-radius: 60px;
+    margin-top: 12px;
+    cursor: default;     /* static demo – no real click */
+    box-shadow: 0 6px 0 #316127, inset 0 2px 8px #b6f0a5;
+    text-align: center;
+    border: 1px solid #9dc18a;
+    letter-spacing: 0.5px;
+}
+
+.buy-btn {
+    background: #b8934a;
+    box-shadow: 0 6px 0 #765f31, inset 0 2px 8px #fad29c;
+}
+
+/* special growing card with progress */
+.growing-card {
+    background: #f8edd3;
+}
+
+.progress-block {
+    background: #746b4e;
+    border-radius: 40px;
+    padding: 6px 8px;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffe8a3;
+    font-weight: 600;
+    border: 2px solid #e3b159;
+}
+
+.progress-bar-bg {
+    background: #3d3b2c;
+    height: 16px;
+    flex: 1;
+    border-radius: 30px;
+    margin: 0 8px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 50%;               /* 50% as in image */
+    height: 100%;
+    background: linear-gradient(90deg, #f9d56b, #f1b32b);
+    border-radius: 30px;
+    box-shadow: inset 0 1px 3px #ffec9e;
+}
+
+/* ready card – rice ready */
+.ready-card {
+    background: #f6efd2;
+    border-color: #eab557;
+    box-shadow: 0 9px 0 #b28a3d;
+}
+
+.ready-highlight {
+    background: #ffd966;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: #2f4d2b;
+    margin: 8px 0 5px;
+    border: 2px solid #ad823b;
+}
+
+.harvest-btn {
+    background: #d68d42;
+    text-align: center;
+    font-weight: 800;
+    border: 2px solid #ad823b;
+    border-radius: 50px;
+    color: #2d321d;
+    font-size: 1.3rem;
+    padding: 11px 0;
+}
+
+/* bottom navigation */
+.bottom-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #5b6e4b;
+    margin-top: 40px;
+    padding: 14px 12px;
+    border-radius: 60px;
+    border: 2px solid #dbbc7c;
+    box-shadow: 0 8px 0 #3a4f2d, inset 0 2px 10px #bddb9c;
+}
+
+.nav-item {
+    color: #fef6cd;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: #3f5e38;
+    padding: 8px 18px;
+    border-radius: 40px;
+    letter-spacing: 0.7px;
+    border: 1px solid #b7cf8a;
+    box-shadow: inset 0 -2px 0 #234425;
+    cursor: default;
+}
+
+.nav-item.active {
+    background: #efc476;
+    color: #2f4325;
+    box-shadow: 0 4px 0 #a07d3b, inset 0 2px 10px #fff1b5;
+}
+
+/* tiny extras */
+.empty-plot .crop-icon {
+    opacity: 0.7;
+}
+
+.buy-multiple {
+    display: flex;
+    gap: 5px;
+    margin: 4px 0;
+}
+
+.small-text {
+    font-size: 0.75rem;
+    color: #4a5c2c;
+}
+
+hr {
+    border: 1px dashed #bdaa73;
+    margin: 12px 0 0;
+}
+
+/* 'empty plot' specific */
+.empty-label {
+    background: #a7b28b;
+    color: #263f1f;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* adjustments for exactly matching given text */
+.cost-row u {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.grow-mini {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.yield-row strong {
+    background: #f9f2c0;
+    padding: 1px 10px;
+    border-radius: 20px;
+}
