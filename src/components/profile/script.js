@@ -57,8 +57,8 @@ function messageFarmer() {
 // View Products (Future Feature)
 // ===============================
 function viewProducts() {
-    alert("Redirecting to farmer's products...");
-    // Future: window.location.href = "products.html";
+    
+     window.location.href = "../profile_products/index.html";
 }
 
 // ===============================
