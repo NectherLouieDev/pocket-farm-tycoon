@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,21 +9,32 @@
 
 <body>
 
-  <header>
-    <h1 id="header-title">Farmer Seed Shop</h1>
-  </header>
+  <!-- Background page (optional later for your game screen) -->
+  <div class="app-background"></div>
 
-  <div class="container">
+  <!-- Seed shop panel -->
+  <div class="shop-modal">
 
-    <div class="balance">
-      <div>Coins: <span id="coins">100</span></div>
-      <div>Inventory: <span id="inventory">0</span> seeds</div>
+    <div class="shop-panel">
+
+      <!-- Header -->
+      <div class="shop-header">
+        <h2>Seed Shop</h2>
+        <button class="close-btn" aria-label="Close">✕</button>
+      </div>
+
+      <!-- Top status (coins + inventory like your prototype) -->
+      <div class="shop-status">
+        <div>Coins: <span id="coins">100</span></div>
+        <div>Inventory: <span id="inventory">0</span> seeds</div>
+      </div>
+
+      <!-- Items list (cards go here) -->
+      <div class="shop-list" id="shopGrid">
+        <!-- JS will insert shop cards here -->
+      </div>
+
     </div>
-
-    <!-- Only an empty container now -->
-    <div class="grid" id="shopGrid"></div>
-
-    <button id="testBtn">Test Me</button>
 
   </div>
 
@@ -36,5 +46,4 @@
   <script type="module" src="../../utils/navigationLoader.js"></script>
 
 </body>
-
 </html>

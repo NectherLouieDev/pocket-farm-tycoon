@@ -1,9 +1,20 @@
 /* Navigation Bar */
-.navigation-bar {
+/* .navigation-bar {
   width: 100%;
   background-color: #3b4a5c;
   color: #ffffff;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+} */
+
+.navigation-bar {
+  position: fixed;   /* or absolute if you really want */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #3b4a5c;
+  color: #ffffff;
+
+  z-index: 9999;     /* higher than your shop modal */
 }
 
 /* Inner container */

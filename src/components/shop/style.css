@@ -1,78 +1,188 @@
-body {
-    margin: 0;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: #3b4a5c;
-    color: #333333;
+/* -----------------------
+   Base
+------------------------ */
+
+* {
+  box-sizing: border-box;
 }
 
-header {
-    background: #c0bbac;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #e6ecf2;
+  height: 100%;
+  color: #3b3b3b;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 1rem;
+/* -----------------------
+   Modal overlay
+------------------------ */
+
+.shop-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 45, 60, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.balance {
-    background: #c0bbac;
-    color: #ffffff;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+/* -----------------------
+   Main panel
+------------------------ */
+
+.shop-panel {
+  width: 360px;
+  max-width: 92vw;
+  height: 82vh;
+
+  background: #f5f0e6;
+  border-radius: 18px;
+
+  border: 6px solid #4b5f74;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
+/* -----------------------
+   Header
+------------------------ */
+
+.shop-header {
+  position: relative;
+  background: linear-gradient(#fbf7ee, #eee6d6);
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
-.card {
-    background: #c0bbac;
-    color:#5e452a;
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.shop-header h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #4b3f2f;
 }
 
-.card h3 {
-    margin: 0 0 0.5rem 0;
+.close-btn {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: #6b5b45;
 }
 
-.price {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+/* -----------------------
+   Status row
+------------------------ */
+
+.shop-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 14px;
+
+  font-size: 14px;
+  background: #f3eddc;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-button {
-    background: #66aa0e;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 0.5rem;
-    cursor: pointer;
-    transition: background 0.2s ease;
+/* -----------------------
+   List container
+------------------------ */
+
+.shop-list {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
 }
 
-button:hover {
-    background: #256628;
+/* -----------------------
+   Item card (JS should render this structure)
+------------------------ */
+
+.shop-item {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 12px;
+
+  background: #fffaf0;
+  border-radius: 12px;
+  padding: 12px;
+
+  margin-bottom: 12px;
+
+  border: 2px solid #e4dbc8;
+
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6),
+              0 2px 4px rgba(0,0,0,0.08);
 }
+
+/* Crop image */
+
+.shop-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+/* Info area */
+
+.shop-item-info h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.shop-item-info p {
+  margin: 2px 0;
+  font-size: 13px;
+  color: #5a5a5a;
+}
+
+/* BUY button */
+
+.shop-item button {
+  align-self: center;
+
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 2px solid #4f8f1f;
+
+  background: linear-gradient(#6fd12f, #49a514);
+  color: #ffffff;
+
+  font-weight: 800;
+  font-size: 14px;
+
+  cursor: pointer;
+  box-shadow: 0 2px 0 #3b7d12;
+}
+
+.shop-item button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 #3b7d12;
+}
+
+/* -----------------------
+   Footer (from your HTML)
+------------------------ */
 
 footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #777;
-    margin-top: 2rem;
+  position: fixed;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.7;
+  pointer-events: none;
 }
