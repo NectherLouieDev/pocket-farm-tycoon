@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm dashboard · seed shop & plots</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- top: XP & coins -->
+        <div class="status-row">
+            <div class="xp-block">
+                <span>1,250 XP</span>
+                <span>20/200</span>
+            </div>
+            <div class="coin-block">
+                <div class="coin-icon">💰</div>
+                <span>1,540</span>
+            </div>
+        </div>
+
+        <!-- Seed Shop + Farm Dashboard side by side -->
+        <div class="section-title">
+            <h2>Seed Shop</h2>
+            <span class="badge">Farm Dashboard</span>
+        </div>
+
+        <!-- first row: Empty plot, Rice, Growing Corn -->
+        <div class="plot-grid">
+            <!-- EMPTY PLOT card -->
+            <div class="plot-card empty-plot">
+                <span class="card-label">⛔ Empty Plot</span>
+                <div class="crop-icon">🟫🟫</div>
+                <div class="crop-details">
+                    <div class="cost-row"><span>🟤 fallow</span> <span class="empty-label">ready</span></div>
+                    <div style="height: 6px;"></div>
+                    <div class="cost-row"><span>PLANT</span> <span>——</span></div>
+                </div>
+                <div class="plant-btn" style="background:#7f8c6b; box-shadow:0 6px 0 #556b47;">EMPTY</div>
+                <div class="small-text" style="margin-top:6px;"> </div>
+            </div>
+
+            <!-- RICE (cost 50, 5min, yield 8) -->
+            <div class="plot-card">
+                <span class="card-label">🌾 Rice</span>
+                <div class="crop-icon">🌾🌾</div>
+                <div class="crop-details">
+                    <div class="cost-row"><span>Cost:</span> <span>💰50</span></div>
+                    <div class="cost-row"><span>Growth time:</span> <span>5min</span></div>
+                    <div class="yield-row"><span>Yield:</span> <span>8 Rice</span></div>
+                </div>
+                <div class="plant-btn">PLANT</div>
+                <div class="buy-multiple"><span class="buy-btn" style="margin-top:6px; padding:8px;">BUY</span></div>
+            </div>
+
+            <!-- GROWING CORN (cost 75, 8min, 50% progress) -->
+            <div class="plot-card growing-card">
+                <span class="card-label">🌽 Growing Corn</span>
+                <div class="crop-icon">🌽⏳</div>
+                <div class="crop-details">
+                    <div class="cost-row"><span>Cost:</span> <span>💰75</span></div>
+                    <div class="cost-row"><span>Growth time:</span> <span>8min</span></div>
+                    <div class="yield-row"><span>Yield:</span> <span>12 Corn</span></div>
+                </div>
+                <!-- progress bar exactly as described: 02:15 & 50% -->
+                <div class="progress-block">
+                    <span>⏱️ 02:15</span>
+                    <div class="progress-bar-bg"><div class="progress-fill" style="width:50%"></div></div>
+                    <span>50%</span>
+                </div>
+                <div class="buy-btn" style="margin-top: 8px;">BUY</div>
+            </div>
+        </div>
+
+        <!-- second row: extra buy row and RICE READY card -->
+        <div style="display: flex; flex-wrap: wrap; gap: 16px; margin: 8px 0 0;">
+            <!-- we need a duplicate "BUY" item? Actually the layout: the image shows another "BUY" under Corn, already there, 
+            and then a separate "Rice Ready!" card. So let's put the ready card here as an independent wide card, but preserve consistency. -->
+            <div class="plot-card ready-card" style="flex: 2 1 300px;">
+                <span class="card-label">✨ Ready crop</span>
+                <div class="crop-icon">🍚🌾</div>
+                <div class="ready-highlight">Rice Ready!</div>
+                <div class="harvest-btn">HARVEST</div>
+                <!-- small yield note -->
+                <div style="display:flex; justify-content:center; margin-top: 6px; gap:20px; font-weight:600;">
+                    <span>⭐ 8 Rice</span>
+                    <span>✨ 12 XP</span>
+                </div>
+            </div>
+            <!-- decorative filler to keep "BUY" near corn? Actually there is "BUY" under Corn already. The image shows extra "BUY" under the corn card? 
+            but we have a BUY button inside corn card, that's fine. -->
+        </div>
+
+        <!-- additional BUY button from seed shop context: original snippet shows "BUY" below Corn card also, but we already have buy inside. 
+        but the mockup lists two times BUY? maybe one for seed. to be safe we add a small seed-shop row -->
+        <div style="display:flex; gap:20px; justify-content: flex-end; margin: 10px 16px 0;">
+            <span style="background:#cfb27c; padding:4px 28px; border-radius:40px; font-weight:700; border:2px solid #a18146;">BUY</span>
+            <span style="background:#cfb27c; padding:4px 28px; border-radius:40px; font-weight:700; border:2px solid #a18146;">BUY</span>
+        </div>
+
+        <!-- BOTTOM nav: HOME, INVENTORY, PROCESSING, MARKET (exactly as required) -->
+        <div class="bottom-nav">
+            <span class="nav-item active">🏡 HOME</span>
+            <span class="nav-item">📦 INVENTORY</span>
+            <span class="nav-item">⚙️ PROCESSING</span>
+            <span class="nav-item">🏪 MARKET</span>
+        </div>
+
+        <!-- tiny extra detail: xp and time as per image second line (already top) -->
+        <div style="display: flex; justify-content: space-between; margin-top: 15px; color: #3d6320; font-weight:600; padding:0 6px;">
+            <span>🌱 season: spring</span>
+            <span>🍂 20/200</span>
+        </div>
+    </div>
+
+    <!-- additional note: The image also shows "Empty Plot", "Rice", "Growing Corn", "Rice Ready!" and the buttons.
+    The data matches: 1,250 XP, 20/200, cost 50/75, times, yield 8/12. Also "02:15" and "50%" inside growing card. -->
+</body>
+</html>
