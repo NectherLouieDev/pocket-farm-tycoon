@@ -39,6 +39,14 @@ const seeds = [
     image: "./images/mango.png",
     growth: "12 min",
     yield: "3 Mango"
+  },
+  {
+    id: "banana",
+    title: "Banana",
+    price: 17,
+    image: "./images/mango.png",
+    growth: "12 min",
+    yield: "3 Banana"
   }
 ];
 
