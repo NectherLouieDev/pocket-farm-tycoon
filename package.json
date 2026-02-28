@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node build.js",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "glob": "^13.0.6",
     "vite": "^7.2.4"
   }
 }

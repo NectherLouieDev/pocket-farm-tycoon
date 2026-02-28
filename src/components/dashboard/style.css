@@ -189,7 +189,7 @@ body {
     border: 1px solid #bda468;
 }
 
-.plant-btn, .buy-btn {
+.plant-btn {
     background: #589641;
     border: none;
     color: white;
@@ -197,7 +197,7 @@ body {
     font-size: 1.2rem;
     padding: 10px 0;
     border-radius: 60px;
-    margin-top: 12px;
+    margin: 12px;
     cursor: default;     /* static demo – no real click */
     box-shadow: 0 6px 0 #316127, inset 0 2px 8px #b6f0a5;
     text-align: center;
@@ -207,6 +207,12 @@ body {
 
 .buy-btn {
     background: #b8934a;
+    margin: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
     box-shadow: 0 6px 0 #765f31, inset 0 2px 8px #fad29c;
 }
 
@@ -219,7 +225,7 @@ body {
     background: #746b4e;
     border-radius: 40px;
     padding: 6px 8px;
-    margin: 6px 0;
+    margin: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
