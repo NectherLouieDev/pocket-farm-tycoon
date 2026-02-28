@@ -1,113 +1,146 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
 }
 
 /* Mobile-only background */
 body {
-    min-height: 100vh;
-    background: #2a382a;  /* Your chosen palette */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 100vh;
+  background: #2a382a; /* Your chosen palette */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Phone container */
 .container {
-    width: 100%;
-    max-width: 480px;   /* Phone width */
-    padding: 15px;
+  width: 100%;
+  max-width: 480px; /* Phone width */
+  padding: 15px;
 }
 
 /* Login card */
 .login-card {
-    width: 100%;
-    background: #eeeeee;
-    padding: 25px 20px;
-    border-radius: 15px;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-    text-align: center;
+  width: 100%;
+  background: #eeeeee;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 .login-card h2 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 /* Inputs */
 .input-group {
-    margin-bottom: 15px;
-    text-align: left;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .input-group label {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 5px;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .input-group input {
-    width: 100%;
-    padding: 12px 15px;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 14px;
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #15ad6e;
 }
 
 /* Buttons */
 .login-btn {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 25px;
-    background: linear-gradient(to right, #134d37, #15ad6e);
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #134d37, #15ad6e);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .login-btn:hover {
-    opacity: 0.9;
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 .forgot {
-    display: block;
-    margin: 10px 0;
-    font-size: 14px;
-    color: #0e8d3e;
-    text-decoration: none;
+  display: block;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #0e8d3e;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
 }
 
 .new-user {
-    margin-top: 15px;
-    font-size: 14px;
+  margin-top: 15px;
+  font-size: 14px;
 }
 
 .signup-btn {
-    margin-top: 8px;
-    padding: 10px 22px;
-    border-radius: 25px;
-    border: 1px solid #000;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
+  margin-top: 8px;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: 1px solid #134d37;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+  color: #134d37;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.signup-btn:hover {
+  background: #134d37;
+  color: white;
 }
 
 .signup-with {
-    margin: 20px 0 10px;
-    font-size: 13px;
+  margin: 20px 0 10px;
+  font-size: 13px;
+  color: #666;
 }
 
 .social-icons i {
-    margin: 0 12px;
-    font-size: 20px;
-    color: #145a33;
-    cursor: pointer;
+  margin: 0 12px;
+  font-size: 20px;
+  color: #145a33;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .social-icons i:hover {
-    color: #10f16e;
+  color: #10f16e;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .login-card {
+    padding: 20px 15px;
+  }
 }
