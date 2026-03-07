@@ -11,5 +11,8 @@
   "devDependencies": {
     "glob": "^13.0.6",
     "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
   }
 }

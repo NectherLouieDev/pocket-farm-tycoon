@@ -24,10 +24,7 @@ function copyFiles(src, dest) {
 }
 
 // Copy component HTML files to dist
-copyFiles(join(__dirname, 'src/components'), join(__dirname, 'dist/src/components'))
-
-// Copy utils folder to dist
-copyFiles(join(__dirname, 'src/utils'), join(__dirname, 'dist/src/utils'))
+copyFiles(join(__dirname, 'src'), join(__dirname, 'dist/src'))
 
 // Also copy root index.html
 copyFileSync(

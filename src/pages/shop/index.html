@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seed Shop</title>
+
+  <!-- global styles -->
+  <link rel="stylesheet" href="../../../global-style.css">
+
+  <!-- (optional) page specific styles later -->
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+</head>
+
+<body>
+
+  <br>
+  <br>
+  <br>
+  <div class="container">
+
+    <!-- Header -->
+    <div class="card mb-2">
+
+      <div class="card-header">
+        Seed Shop
+      </div>
+
+      <!-- top status bar -->
+      <div class="status-bar">
+
+        <div class="coin-display">
+          <div class="coin-icon">¢</div>
+          <span id="coins">100</span>
+        </div>
+
+        <div class="badge">
+          Inventory: <span id="inventory">0</span> seeds
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Shop grid -->
+    <div id="shopGrid" class="grid"></div>
+
+  </div>
+
+  <footer class="text-center mt-3 text-small">
+    Minimal Seed Shop Prototype
+  </footer>
+
+  <script src="./script.js"></script>
+  <script type="module" src="../../utils/navigationLoader.js"></script>
+
+</body>
+</html>

@@ -61,17 +61,35 @@ function renderShop() {
 
   seeds.forEach(seed => {
     const item = document.createElement("div");
-    item.className = "shop-item";
+    item.className = "card shop-item";
 
     item.innerHTML = `
-      <img src="${seed.image}" alt="${seed.title}">
-      <div class="shop-item-info">
-        <h3>${seed.title}</h3>
-        <p>Cost: <strong>${seed.price}</strong> coins</p>
-        <p>Growth Time: <strong>${seed.growth}</strong></p>
-        <p>Yield: <strong>${seed.yield}</strong></p>
+      <div class="text-center mb-1">
+        <img src="${seed.image}" alt="${seed.title}" class="crop-icon">
       </div>
-      <button data-id="${seed.id}">BUY</button>
+
+      <h4 class="text-center mb-1">${seed.title}</h4>
+
+      <div class="crop-details mb-2">
+        <div class="crop-row">
+          <span>Cost</span>
+          <span class="crop-value">${seed.price}</span>
+        </div>
+        <div class="crop-row">
+          <span>Growth</span>
+          <span class="crop-value">${seed.growth}</span>
+        </div>
+        <div class="crop-row">
+          <span>Yield</span>
+          <span class="crop-value">${seed.yield}</span>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button class="btn btn-primary" data-id="${seed.id}">
+          Buy
+        </button>
+      </div>
     `;
 
     item.querySelector("button").addEventListener("click", () => {

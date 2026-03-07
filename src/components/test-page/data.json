@@ -1,0 +1,23 @@
+{
+    "name": "Sample Data",
+    "version": "1.0.0",
+    "description": "This is a sample JSON file for the fetch demo",
+    "timestamp": "2024-01-01T12:00:00Z",
+    "users": [
+        {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com"
+        },
+        {
+            "id": 2,
+            "name": "Jane Smith",
+            "email": "jane@example.com"
+        }
+    ],
+    "settings": {
+        "theme": "dark",
+        "notifications": true,
+        "language": "en"
+    }
+}
