@@ -1,12 +1,10 @@
+const SERVER_PORT = 3000;
+const BASE_API = "http://localhost:" + SERVER_PORT;
+
 function openSignup() {
   console.log("akdfalsdkjf");
   window.location.href = "signup.html";
 }
-
-document.getElementById("loginForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  clientLogin();
-});
 
 async function clientLogin() {
     alert("client is Logging in");
@@ -24,11 +22,10 @@ async function login(username, password) {
 
     alert("trying to fetch");
 
-    const text = await response.text();
-    console.log(text, JSON.stringify({ username, password }));
+    console.log(JSON.stringify({ username, password }));
 
     // Fetch from login endpoint
-    const response = await fetch('/api/login', {
+    const response = await fetch(BASE_API + '/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

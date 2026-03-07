@@ -1,6 +1,7 @@
 import express from 'express';
 import fs from 'fs/promises';
-import path from 'path'
+import path from 'path';
+import cors from 'cors';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -11,6 +12,7 @@ const PORT = 3000;
 const DB_PATH = path.join(__dirname, 'database.json');
 
 // Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
@@ -60,6 +62,56 @@ app.post('/api/login', async (req, res) => {
 
   } catch (error) {
     console.error('Login error:', error);
+    res.status(500).json({ success: false, error: 'Server error' });
+  }
+});
+
+// SIGNUP route - create new user
+app.post('/api/signup', async (req, res) => {
+  try {
+    const { username, password, name } = req.body;
+
+    // Validation
+    if (!username || !password) {
+      return res.json({ 
+        success: false, 
+        error: 'Username and password are required' 
+      });
+    }
+
+    const db = await readDB();
+
+    // Check if username exists
+    const existingUser = db.users.find(u => u.username === username);
+    if (existingUser) {
+      return res.json({ 
+        success: false, 
+        error: 'Username already taken' 
+      });
+    }
+
+    // Create new user
+    const newUser = {
+      id: db.users.length + 1,
+      username,
+      password, // In real app, hash this!
+      name: name || username
+    };
+
+    db.users.push(newUser);
+    await fs.writeFile(DB_PATH, JSON.stringify(db, null, 2));
+
+    // Return user without password
+    const { password: _, ...userWithoutPassword } = newUser;
+
+    res.json({
+      success: true,
+      message: 'User created successfully',
+      user: userWithoutPassword
+    });
+
+  } catch (error) {
+    console.error('Signup error:', error);
     res.status(500).json({ success: false, error: 'Server error' });
   }
 });
